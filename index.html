@@ -5,116 +5,314 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Afsar's AI Assistant</title>
+    <title>Apsar Basha | AI Career Assistant</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
+    <div class="app-shell">
 
-    <div class="chat-container">
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
 
-        <!-- Header -->
+            <div class="brand">
+                <div class="brand-logo">A</div>
 
-        <div class="chat-header">
+                <div>
+                    <h2>Apsar Basha</h2>
+                    <span>AI Career Assistant</span>
+                </div>
+            </div>
 
-            <div class="profile">
+            <div class="profile-card">
 
-                <div class="ai-avatar">
-                    🤖
+                <div class="profile-avatar">
+                    AB
                 </div>
 
-                <div class="profile-info">
-                    <h2>Afsar's AI Assistant</h2>
+                <h3>Apsar Basha</h3>
 
-                    <div class="status">
-                        <span class="status-dot"></span>
-                        AI Assistant • Online
-                    </div>
+                <p>
+                    Software & Web Development
+                </p>
+
+                <div class="availability">
+                    <span></span>
+                    Open to opportunities
                 </div>
 
             </div>
 
-        </div>
+            <div class="sidebar-section">
+
+                <p class="section-title">Explore</p>
+
+                <button class="sidebar-button" onclick="quickQuestion('What are Afsar technical skills?')">
+                    <span>💻</span>
+                    Technical Skills
+                </button>
+
+                <button class="sidebar-button" onclick="quickQuestion('Tell me about Afsar projects.')">
+                    <span>🚀</span>
+                    Projects
+                </button>
+
+                <button class="sidebar-button" onclick="quickQuestion('Tell me about Afsar education.')">
+                    <span>🎓</span>
+                    Education
+                </button>
+
+                <button class="sidebar-button" onclick="quickQuestion('Why should we hire Afsar?')">
+                    <span>⭐</span>
+                    Why Hire Apsar?
+                </button>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="social-links">
+
+                    <a href="https://github.com/Apsar-0089" target="_blank" rel="noopener noreferrer"
+                        class="social-link">
+                        <span class="social-icon">◉</span>
+
+                        <div>
+                            <strong>GitHub</strong>
+                            <small>View my projects</small>
+                        </div>
+
+                        <span class="social-arrow">↗</span>
+                    </a>
 
 
-        <!-- Chat -->
+                    <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="social-icon">in</span>
 
-        <div class="chat-box" id="chat-box">
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <small>Connect with me</small>
+                        </div>
 
-            <div class="welcome-card">
+                        <span class="social-arrow">↗</span>
+                    </a>
 
-                <div class="welcome-icon">
-                    👋
+                    <div class="contact-section">
+
+                        <p class="contact-title">CONTACT</p>
+
+                        <a href="mailto:shaikafsar0089@gmail.com" class="contact-link">
+                            <span class="contact-icon">✉</span>
+
+                            <div>
+                                <strong>Email Me</strong>
+                                <small>shaikafsar0089@gmail.com</small>
+                            </div>
+
+                            <span class="contact-arrow">↗</span>
+                        </a>
+
+
+                        <a href="tel:+918247692957" class="contact-link">
+                            <span class="contact-icon">☎</span>
+
+                            <div>
+                                <strong>Call Me</strong>
+                                <small>+91 8247692957</small>
+                            </div>
+
+                            <span class="contact-arrow">↗</span>
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="mini-info">
+                        <span>AI Assistant</span>
+                        <strong>Powered by Gemini</strong>
+                    </div>
+
                 </div>
 
-                <h3>Hello! I'm Afsar's AI Assistant</h3>
+            </div>
 
-                <p>
-                    Ask me about Afsar's skills, projects,
-                    education or career interests.
+        </aside>
+
+
+        <!-- MAIN CHAT -->
+        <main class="chat-container">
+
+            <!-- HEADER -->
+
+            <header class="chat-header">
+
+                <div class="header-left">
+
+                    <div class="ai-avatar">
+                        🤖
+                    </div>
+
+                    <div class="header-info">
+
+                        <h1>Apsar's AI Assistant</h1>
+
+                        <div class="status">
+                            <span class="status-dot"></span>
+                            Online • Ready to help
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="header-clear" onclick="clearChat()" title="Clear conversation">
+                    ↻
+                </button>
+
+            </header>
+
+
+            <!-- CHAT CONTENT -->
+
+            <div class="chat-box" id="chat-box">
+
+                <div class="welcome-section">
+
+                    <div class="welcome-icon">
+                        ✨
+                    </div>
+
+                    <p class="eyebrow">
+                        WELCOME TO APSAR'S PORTFOLIO
+                    </p>
+
+                    <h2>
+                        How can I help you?
+                    </h2>
+
+                    <p class="welcome-description">
+                        I'm Apsar's AI career assistant. Ask me about
+                        his technical skills, projects, education,
+                        career interests, or experience.
+                    </p>
+
+                    <div class="suggestion-grid">
+
+                        <button onclick="quickQuestion('What are Afsar technical skills?')">
+                            <span class="suggestion-icon">💻</span>
+
+                            <div>
+                                <strong>Technical Skills</strong>
+                                <small>Explore his skill set</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+                        </button>
+
+                        <button onclick="quickQuestion('Tell me about Afsar projects.')">
+                            <span class="suggestion-icon">🚀</span>
+
+                            <div>
+                                <strong>Projects</strong>
+                                <small>View his key projects</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+                        </button>
+
+                        <button onclick="quickQuestion('Why did Afsar build this chatbot?')">
+                            <span class="suggestion-icon">🤖</span>
+
+                            <div>
+                                <strong>AI Chatbot</strong>
+                                <small>Learn about this project</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+                        </button>
+
+                        <button onclick="quickQuestion('Why should we hire Afsar?')">
+                            <span class="suggestion-icon">⭐</span>
+
+                            <div>
+                                <strong>Why Hire Apsar?</strong>
+                                <small>Discover his strengths</small>
+                            </div>
+
+                            <span class="arrow">→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK QUESTIONS -->
+
+            <div class="quick-questions">
+
+                <button onclick="quickQuestion('What are Afsar technical skills?')">
+                    💻 Skills
+                </button>
+
+                <button onclick="quickQuestion('Tell me about Afsar projects.')">
+                    🚀 Projects
+                </button>
+
+                <button onclick="quickQuestion('Tell me about Afsar education.')">
+                    🎓 Education
+                </button>
+
+                <button onclick="quickQuestion('Why should we hire Afsar?')">
+                    ⭐ Why Hire?
+                </button>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="input-wrapper">
+
+                <div class="input-area">
+
+                    <input type="text" id="user-input" placeholder="Ask about Afsar's skills, projects, or career..."
+                        autocomplete="off">
+
+                    <button class="send-button" onclick="sendMessage()" title="Send message">
+                        ➤
+                    </button>
+
+                </div>
+
+                <p class="input-hint">
+                    AI-generated responses • Press Enter to send
                 </p>
 
             </div>
 
-        </div>
 
+            <!-- FOOTER -->
 
-        <!-- Quick Questions -->
+            <footer class="footer">
 
-        <div class="quick-questions">
+                <span>AI Career Assistant</span>
 
-            <button onclick="quickQuestion('What are Afsar technical skills?')">
-                💻 Skills
-            </button>
+                <span>•</span>
 
-            <button onclick="quickQuestion('Tell me about Afsar projects.')">
-                🚀 Projects
-            </button>
+                <span>Powered by Gemini AI</span>
 
-            <button onclick="quickQuestion('Why did Afsar build this chatbot?')">
-                🤖 About Chatbot
-            </button>
+            </footer>
 
-        </div>
-
-
-        <!-- Input -->
-
-        <div class="input-area">
-
-            <input
-                type="text"
-                id="user-input"
-                placeholder="Ask me anything about Afsar..."
-                autocomplete="off"
-            >
-
-            <button
-                class="send-button"
-                onclick="sendMessage()"
-            >
-                ➤
-            </button>
-
-            <button
-                class="clear-button"
-                onclick="clearChat()"
-            >
-                Clear
-            </button>
-
-        </div>
-
-
-        <div class="footer">
-            Powered by Gemini AI
-        </div>
+        </main>
 
     </div>
+
 
     <script src="script.js"></script>
 

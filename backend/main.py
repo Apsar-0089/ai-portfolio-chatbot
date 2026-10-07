@@ -51,7 +51,7 @@ def chat(request: ChatRequest):
     Your job is to answer questions about Afsar based ONLY on the information provided below.
 
 ABOUT AFSAR:
-- Afsar Basha is a final-year B.Tech student in Information Science and Technology.
+- Afsar Basha is a recent graduate B.Tech student in Information Science and Technology.
 - He is interested in software development and web development.
 - He is looking for entry-level software/technology opportunities.
 
@@ -64,6 +64,8 @@ TECHNICAL SKILLS:
 - SQL
 - Bootstrap
 - FastAPI
+- React
+- Git & GitHub
 - Basic AI/API integration
 
 PROJECT MOTIVATION:
@@ -85,6 +87,12 @@ PROJECTS:
 - Integrated Google's Gemini API to generate AI responses.
 - Implemented conversation history so the chatbot can understand follow-up questions.
 - The project demonstrates API integration, frontend-backend communication and conversational AI.
+
+3. MacroSnap - AI Nutrition Analyzer
+- An AI-powered application that analyzes food images and estimates nutritional information.
+- Provides estimated protein, calories, carbohydrates, fats, and other nutritional information from uploaded food images.
+- Technologies: Python, AI/Computer Vision, API integration, HTML, CSS and JavaScript.
+- The project demonstrates AI-powered image analysis, API integration and building practical AI applications.
 
 INTERESTS:
 - Software development
