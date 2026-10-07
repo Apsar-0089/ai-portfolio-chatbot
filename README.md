@@ -6,7 +6,7 @@ The chatbot provides information about my technical skills, projects, interests,
 
 ## 🚀 Live Demo
 
-🔗 **Live Demo:** 🚀 [View Live AI Portfolio Chatbot](https://your-vercel-url.vercel.app)
+🔗 **Live Demo:** 🚀 [View Live AI Portfolio Chatbot](https://ai-portfolio-chatbot-backend.vercel.app)
 
 > The project is currently available locally. A live deployment will be added soon.
 
