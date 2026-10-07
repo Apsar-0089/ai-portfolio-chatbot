@@ -134,29 +134,30 @@ INSTRUCTIONS:
     for attempt in range(3):
 
       try:
-           response = client.models.generate_content(
-            model="gemini-3.6-flash",
-            contents=personal_info + "\n\nCONVERSATION:\n" + conversation
-           )
+            response = client.models.generate_content(
+                model="gemini-3.5-flash-lite",
+                contents=personal_info + "\n\nCONVERSATION:\n" + conversation
+            )
 
-           return {
-            "response": response.text
-           }
-
-      except Exception as error:
-
-        print(f"Gemini attempt {attempt + 1} failed: {error}")
-
-        # Retry with increasing delay
-        if attempt == 0:
-                time.sleep(2)
-        elif attempt == 1:
-                time.sleep(4)
-        else:
             return {
-                "response": "Gemini is currently busy. Please try your question again in a few seconds."
+                "response": response.text
             }
 
-    return {
-        "response": response.text
-    }
+      except Exception as error:
+        print(f"Gemini error: {error}")
+
+        error_message = str(error)
+
+        if "429" in error_message or "RESOURCE_EXHAUSTED" in error_message:
+            return {
+                "response": "I'm temporarily unavailable because the AI service has reached its usage limit. Please try again later."
+            }
+
+        if "503" in error_message or "UNAVAILABLE" in error_message:
+            return {
+                "response": "The AI service is temporarily busy. Please try again in a few moments."
+            }
+
+        return {
+            "response": "I'm having trouble connecting to the AI service right now. Please try again shortly."
+        }
